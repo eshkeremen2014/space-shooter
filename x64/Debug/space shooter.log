@@ -1,0 +1,70 @@
+﻿  main.cpp
+C:\Users\Admin\source\repos\space shooter\laser.h(26,18): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(10,9): error C3646: player: неизвестный спецификатор переопределения
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(10,15): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(12,16): error C2061: синтаксическая ошибка: идентификатор "Player"
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(12,33): error C2065: p: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(12,26): error C2614: Laser_manager: недопустимая инициализация члена: "player" не является базовым классом или членом
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(17,32): error C2065: player: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(18,39): error C2065: player: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\laser_manager.h(19,39): error C2065: player: необъявленный идентификатор
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\player.h(29,15): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\meteor.h(33,23): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\meteor.h(33,15): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\meteor_manager.h(20,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\meteor_manager.h(21,12): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\meteor_manager.h(34,13): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\meteor_manager.h(35,13): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  (компиляция исходного файла "main.cpp")
+  
+C:\Users\Admin\source\repos\space shooter\game.h(42,90): error C2665: "Laser_manager::Laser_manager": ни одна перегруженная функция не может преобразовать все типы аргументов
+  (компиляция исходного файла "main.cpp")
+  C:\Users\Admin\source\repos\space shooter\laser_manager.h(34,1):
+  может быть "Laser_manager::Laser_manager(Laser_manager &&) noexcept(false)"
+  	C:\Users\Admin\source\repos\space shooter\game.h(42,90):
+  	"Laser_manager::Laser_manager(Laser_manager &&) noexcept(false)": невозможно преобразовать аргумент 1 из "Player" в "Laser_manager &&"
+  		C:\Users\Admin\source\repos\space shooter\game.h(42,91):
+  		Причина: невозможно преобразовать "Player" в "Laser_manager"
+  		C:\Users\Admin\source\repos\space shooter\game.h(42,91):
+  		Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
+  C:\Users\Admin\source\repos\space shooter\laser_manager.h(34,1):
+  или       "Laser_manager::Laser_manager(const Laser_manager &)"
+  	C:\Users\Admin\source\repos\space shooter\game.h(42,90):
+  	"Laser_manager::Laser_manager(const Laser_manager &)": невозможно преобразовать аргумент 1 из "Player" в "const Laser_manager &"
+  		C:\Users\Admin\source\repos\space shooter\game.h(42,91):
+  		Причина: невозможно преобразовать "Player" в "const Laser_manager"
+  		C:\Users\Admin\source\repos\space shooter\game.h(42,91):
+  		Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
+  C:\Users\Admin\source\repos\space shooter\game.h(42,90):
+  при попытке сопоставить список аргументов "(Player)"
+  
