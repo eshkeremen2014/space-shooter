@@ -2,11 +2,15 @@
 #include <SFML/Graphics.hpp>
 #include"settings.h"
 #include"laser_manager.h"
+
 class Player {
 private:
 	sf::Texture texture;
 	sf::Sprite sprite;
 	int speedX;
+	sf::Clock clock;
+	int timer;
+	int hp = 100;
 public:
 	Player(){
 		texture.loadFromFile(PLAYER_FILE_NAME);
@@ -15,6 +19,12 @@ public:
 	}
 	sf::FloatRect getHitBox() {
 		return sprite.getGlobalBounds();
+	}
+	void reduseHP(int damage) {
+		hp -= damage;
+	}
+	int getHp() {
+		return hp;
 	}
 	void draw(sf::RenderWindow& window) {
 		window.draw(sprite);
@@ -39,7 +49,12 @@ public:
 		}
 	}
 	void shoot(Laser_manager& l_m) {
-		l_m.create_laser();
+		
+		int now = clock.getElapsedTime().asMilliseconds();
+		if (now - timer > CD_SHOOTING) {
+			l_m.create_laser(*this);
+			timer = now;
+		}
 	}
 	sf::Vector2f getPosition() {
 		return sprite.getPosition();

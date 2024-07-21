@@ -1,27 +1,18 @@
 #pragma once
+#pragma once
 #include <SFML/Graphics.hpp>
 #include"settings.h"
 #include <list>
-class Meteor {
+class Bonus {
 private:
 	sf::Texture texture;
 	sf::Sprite sprite;
-	int speedX;
-	int speedY;
-	int damag;
-	
+	int speedY=3;
+	bool isToDel = false;
 public:
-	Meteor( std::string texture_file_name) {
+	Bonus(std::string texture_file_name) {
 		texture.loadFromFile(texture_file_name);
 		sprite.setTexture(texture);
-		
-
-	}
-	int getDamag() {
-		return damag;
-	}
-	void setDamag(int damag) {
-		this->damag = damag;
 	}
 	sf::FloatRect getHitBox() {
 		return sprite.getGlobalBounds();
@@ -29,17 +20,21 @@ public:
 	sf::Vector2f getPosition() {
 		return sprite.getPosition();
 	}
-	void setSpeed(int speedX, int speedY) {
-		this->speedX = speedX;
+	void setSpeed( int speedY) {
 		this->speedY = speedY;
 	}
 	void setPosition(float x, float y) {
 		sprite.setPosition(x, y);
 	}
 	void update() {
-		sprite.move(speedX, speedY);
+		sprite.move(0, speedY);
 	}
 	void draw(sf::RenderWindow& window) {
 		window.draw(sprite);
 	}
+	void setDel() {
+		isToDel = true;
+	}
+	bool getDel() {
+		return isToDel;
 };

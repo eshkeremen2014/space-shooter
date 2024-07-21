@@ -6,3 +6,5 @@ const std::string TITLE = "space shooter";
 const int FPS = 60;
 const int PLAYER_SPEED = 5;
 const std::string PLAYER_FILE_NAME="images/playerShip1_red.png";
+const int CD_SHOOTING = 500;
+const int BONUS_CHANCE = 50;
